@@ -1,0 +1,69 @@
+<h1>{{d}}</h1>
+name:<input type="text">
+<button [disabled]="isdisabled">submit</button>
+<!-- <h2 [class]="isactive?'active':'inactive'">this is a pavan</h2> -->
+<!-- <h2 [class]="{c1:true}">this is a pavan</h2> -->
+<h2 [class]="{c1:applyC1,'active':'inactive'}">this is a pavan</h2>
+
+<button (click)="increment()">increment</button>
+<button (click)="decrement()">decrement</button>
+
+
+<h3>counter:{{counter}}</h3>
+<!-- <h3>counter:{{counter}}</h3> -->
+
+Name:<input type="text" (input)="changeName($event)">
+<h1 class="pavan">your name:{{name}}</h1>
+
+name:<input type="text" [(ngModel)]="city">
+
+<p>{{ city }}</p>
+
+<button (click)="updatecity()">update</button>
+
+<table border="1px">
+  <tr *ngFor="let m of movies">
+    <td>{{m}}</td>
+ </tr>
+  </table>
+
+  <h1 *ngIf="show">pavan</h1>
+
+  <h1 *ngIf="!data" >loading.......</h1>
+  <h1><div *ngIf="data">
+    {{data}}
+  </div></h1>
+
+  <p *ngFor="let n of nums">paragraph {{n}} </p>
+
+  <table>
+    <tr *ngFor="let n of nums;index as i">
+      <td>
+        data {{i+1}}
+      </td>
+    </tr>
+  </table>
+
+  <table border="3px" >
+    <tr>
+      <td>mobiles</td>
+      <td>index</td>
+      <td>even</td>
+      <td>odd</td>
+      <td>first</td>
+      <td>last</td>
+    </tr>
+    <tr *ngFor="let m of mobiles; index as i;even as e;odd as o;first as f;last as l">
+       <td>{{m}} </td>
+      <td>{{i}}</td>
+      <td>{{e}}</td>
+      <td>{{o}}</td>
+      <td>{{f}}</td>
+      <td>{{l}}</td>
+
+    </tr>
+  </table>
+
+  <h1>{{namee | lowercase}}</h1>
+  <h1>{{salary | currency : 'INR'}}</h1>
+

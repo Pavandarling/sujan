@@ -1,0 +1,15 @@
+.active{
+    background-color: rgb(7, 7, 7);
+    color: aqua;
+}
+.inactive{
+    background: #000;
+    color: aliceblue;
+}
+.c1{
+    border: 2px solid red;
+}
+
+.pavan{
+    color: red;
+}
